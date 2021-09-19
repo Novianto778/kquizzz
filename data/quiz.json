@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "question": "Select semua data dari tabel buku",
+    "answer": "SELECT * FROM tbl_buku"
+  },
+  {
+    "id": 2,
+    "question": "Select semua data dari tabel members",
+    "answer": "SELECT * FROM tbl_members"
+  },
+  {
+    "id": 3,
+    "question": "Select semua data dari tabel buku di mana penerbitnya Erlangga",
+    "answer": "SELECT * FROM tbl_buku WHERE penerbit = \"Erlangga\" "
+  }
+]

@@ -1,0 +1,45 @@
+<%- include("parts/header", {title: "Quiz"}) %>
+<div class="quiz-wrapper container">
+  <h6 class="mt-4"><span><%= quiz.id %>. </span><%= quiz.question %></h6>
+  <form class="quiz-result" action="/quiz/<%= quiz.id %>" method="POST">
+    <div class="code-wrapper">
+      <div class="line-numbers">&gt;</div>
+      <textarea autofocus class="language-html" name="query" id="query">
+    <%= query %> 
+    </textarea
+      >
+    </div>
+    <div class="button__container">
+      <button type="submit" class="btn btn--primary btn--small">
+        Test Code
+      </button>
+      <a class="btn btn--small btn--outlined" href="/quiz/<%= quiz.id + 1 %>"
+        >Next Quiz</a
+      >
+    </div>
+  </form>
+</div>
+<main class="container mt-5">
+  <% if (column) { %>
+  <table class="table">
+    <thead>
+      <tr>
+        <% column.forEach(col => { %>
+        <th scope="col"><%= col %></th>
+        <% }) %>
+      </tr>
+    </thead>
+    <tbody>
+      <% let array = arr[0] %> <% for( let i = 0; i < array.length; i++ ) { %>
+      <tr>
+        <% for( let j = 0; j < array[i].length; j++ ) { %>
+        <td scope="row"><%= array[i][j] %></td>
+        <% } %>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <% } %>
+</main>
+
+<%- include("parts/footer") %>

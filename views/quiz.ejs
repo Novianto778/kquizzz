@@ -1,0 +1,13 @@
+<%- include("parts/header", {title: "Homepage"}) %>
+<main class="container">
+  <h2>Quiz Query</h2>
+  <div class="quiz__question">
+    <% quiz.forEach((item, idx) => { %>
+    <div class="question__item">
+      <h3><span><%= idx + 1 %>. </span><%= item.question %></h3>
+      <a href="/quiz/<%= item.id %> " class="btn btn--primary btn--small">Test</a>
+    </div>
+    <% }) %>
+  </div>
+</main>
+<%- include("parts/footer") %>

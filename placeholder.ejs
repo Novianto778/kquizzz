@@ -1,0 +1,43 @@
+<main class="container mt-5">
+  <h1>
+    Quiz Query <%= quiz.id %>
+    <span class="btn btn-success badge rounded-pill"
+      ><%= quiz.answer == query ? "Success" : "" %></span
+    >
+  </h1>
+  <h6 class="mt-4"><%= quiz.question %></h6>
+  <form action="/quiz/<%= quiz.id %>" method="POST">
+    <div class="input-group w-50">
+      <textarea
+        name="query"
+        class="form-control fs-4"
+        aria-label="With textarea"
+        rows="5"
+      ><%= query %> </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Execute</button>
+  </form>
+  <% if (column) { %>    
+  <table class="table">
+    <thead>
+      <tr>
+          <% column.forEach(col => { %>
+            <th scope="col"><%= col %></th>
+          <% }) %>
+      </tr>
+    </thead>
+    <tbody>
+      <% let array = arr[0] %> 
+      <% for( let i = 0; i < array.length; i++ ) { %>
+        <tr>
+        <% for( let j = 0; j < array[i].length; j++ ) { %>
+            <td scope="row"><%= array[i][j] %> </td>
+        <% } %>   
+        </tr>      
+      <% } %>
+
+      
+    </tbody>
+  </table>
+  <% } %>
+</main>

@@ -1,0 +1,51 @@
+<%- include("parts/header", {title: "Homepage"}) %>
+<div class="hero">
+  <div class="hero__wrapper container">
+    <div class="hero__content">
+      <h1>Welcome to KQuizzz</h1>
+      <p class="text--body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, saepe
+        ut minima maxime nam nobis officiis omnis aut voluptatum. Perspiciatis?
+      </p>
+      <button class="btn btn--primary">Start Quiz</button>
+    </div>
+    <div class="hero__image">
+      <img src="/hero.svg" alt="quiz" />
+    </div>
+  </div>
+</div>
+
+<div class="quiz container">
+  <h2 class="text--heading text--primary">All Quiz</h2>
+  <div class="quiz__wrapper grid-cols-3">
+    <div class="quiz__item">
+      <h3 class="quiz__title">Quiz 1</h3>
+      <div class="quiz__info">
+        <p>5 Question</p>
+        <div class="line"></div>
+        <p>Beginner</p>
+      </div>
+      <a href="/quiz" class="btn btn--primary btn--small">Test</a>
+    </div>
+    <div class="quiz__item">
+      <h3 class="quiz__title">Quiz 1</h3>
+      <div class="quiz__info">
+        <p>5 Question</p>
+        <div class="line"></div>
+        <p>Beginner</p>
+      </div>
+      <a href="/quiz" class="btn btn--primary btn--small">Test</a>
+    </div>
+    <div class="quiz__item">
+      <h3 class="quiz__title">Quiz 1</h3>
+      <div class="quiz__info">
+        <p>5 Question</p>
+        <div class="line"></div>
+        <p>Beginner</p>
+      </div>
+      <a href="/quiz" class="btn btn--primary btn--small">Test</a>
+    </div>
+  </div>
+</div>
+
+<%- include("parts/footer") %>
